@@ -115,7 +115,7 @@ var ryu = {
 
 ### Step 5 - REDUCE THE DAMAGE!... almost
 
-- How are you at math?
+<!-- - How are you at math?
 
 1. Create a function that will be called, addMods().
 2. Using a "for loop", calculate the combined value of modifiers in the target.items array.
@@ -125,7 +125,7 @@ var ryu = {
    2. This variable should be outside of the loop
    3. Inside the loop, increase the running total by the 'current items' modifier value
    4. Arrays need to be accessed by index. \[i]
-3. Have the function return the total.
+3. Have the function return the total. -->
 
 ### Step 6 - REDUCE THE DAMAGE!... for real this time.
 

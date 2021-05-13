@@ -13,19 +13,43 @@
   </head>
 
   <header>
-    <span>Health:<span id="health"> </span></span>
+    <span>Name: Rick James<span> </span></span><br />
+    <span>Health: <span id="health"> </span></span><br />
+    <span>Hits:<span id="hits"> </span></span><br />
   </header>
 
   <body>
     <main>
-      <img
-        class="img-rick"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7nF_E8aRDS_lw7u92zXhIEFR12CcuZ6I2Nz0uLC4uuMZ90MwzaizGQrlYwqetBAgw_Vw&usqp=CAU"
-      />
+      <div class="container-fluid d-flex flex-column justify-content-center">
+        <div class="row justify-content-center">
+          <div class="col-6 bg-white rounded shadow p-2">
+            <img
+              class="img-rick col-6"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7nF_E8aRDS_lw7u92zXhIEFR12CcuZ6I2Nz0uLC4uuMZ90MwzaizGQrlYwqetBAgw_Vw&usqp=CAU"
+            />
+            <div id="items">
+              <div id="items">
+                <button class="" onclick="brick()">Give Rick a Brick</button>
+                <button class="" onclick="giveFire()">
+                  Give Rick some Fire
+                </button>
+                <button class="" onclick="karate()">
+                  Give Rick some Karate Skills
+                </button>
+              </div>
+            </div>
 
-      <footer>
-        <button class="btn-slap" onClick="slap()">SLAP!!!</button>
-      </footer>
+            <footer class="col-10 p-4">
+              <button class="btn-slap" onclick="slap()">SLAP!!!</button>
+              <button class="kick" onclick="kick()">Kick</button>
+              <button class="punch" onclick="punch()">Punch</button>
+              <button class="FIRE" onclick="giveFire()">FIRE</button>
+              <button class="brick" onclick="brick()">Brick</button>
+              <button class="karate" onclick="karate()">Karate</button>
+            </footer>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- Put Javascript tags here -->

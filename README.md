@@ -56,30 +56,30 @@ In this challenge students will demonstrate their understanding of working with 
 
 ### Step 5 - JS - Update the user interface
 
-<!-- 1. We are now going to add a function to manipulate the user interface by using the DOM API.
+<!-- 1. We are now going to add a function to manipulate the user interface by using the DOM API. -->
 
-- To do this, JavaScript is required.
+<!-- - To do this, JavaScript is required.
 - You should know by now that selectors are required in order to select specific elements inside the DOM.
-- In this case, we will use the infamous "document.getElementById("WHATEVER-ID")";
+- In this case, we will use the infamous "document.getElementById("WHATEVER-ID")"; -->
 
-2. Add a function called update(). This will be responsible for updating the user interface whenever a value changes. -->
+<!-- 2. Add a function called update(). This will be responsible for updating the user interface whenever a value changes. -->
 
-- Have the function set the "innerText" of the element with the id "health"
-
+<!-- - Have the function set the "innerText" of the element with the id "health" -->
+<!--
 3. Add a call to the update() function at the bottom of your js file. If it is working, you should see the target's health on the screen.
 
 - There is no need to delete the call you just added, it is recommended so you always start off with populated values.
 
-4. If it is working, make sure you add a call to update at the end of the slap function. This way the screen is updated after every slap.
+4. If it is working, make sure you add a call to update at the end of the slap function. This way the screen is updated after every slap. -->
 
-### Step 6 - HTML - Add the other buttons and stuff...
+<!-- ### Step 6 - HTML - Add the other buttons and stuff...
 
 1. Add 2 more buttons Punch, and Kick to the UI, as well as their respective functions in JavaScript.
 
 - Have the punch function decrease the target's health by 5, and kick by 10.
-- Don't forget to call update inside each function.
+- Don't forget to call update inside each function. -->
 
-2. Declare 2 more variables 'name', and 'hits' where you initialized the health variable.
+<!-- 2. Declare 2 more variables 'name', and 'hits' where you initialized the health variable.
    -Name your target whatever you want, what datatype would a name be?
    -Set the variable hits with a value of 0, every time the target is hit by a Slap, Punch, or Kick
    this variable should be increased by 1.
@@ -94,4 +94,4 @@ In this challenge students will demonstrate their understanding of working with 
 - Click the slap button, you should see the target health drop to 99 and hit count to 1.
 - Click the punch button, you should see the target health drop to 94 and hit count to 2.
 - Finally click the Kick button, you should see the target health drop to 84 and hit count to 3.
-- Keep pressing buttons... What happens when the target has been hit for over 100 hit points? Why does this happen?
+- Keep pressing buttons... What happens when the target has been hit for over 100 hit points? Why does this happen? -->

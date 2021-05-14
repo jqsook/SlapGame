@@ -3,54 +3,105 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slap Object Game</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="game.css" />
+    <title>Slap Object Game</title>
   </head>
 
-  <header>
-    <span>Name: Rick James<span> </span></span><br />
-    <span>Health: <span id="health"> </span></span><br />
-    <span>Hits:<span id="hits"> </span></span><br />
-  </header>
-
   <body>
+    <!-- The header -->
+    <header class="text-dark">
+      <nav
+        class="
+          navbar navbar-expand-lg navbar-light
+          bg-dark
+          text-light
+          d-flex
+          justify-content-around
+          p-4
+        "
+      >
+        <h3>Alien SmackDown</h3>
+      </nav>
+    </header>
     <main>
-      <div class="container-fluid d-flex flex-column justify-content-center">
-        <div class="row justify-content-center">
-          <div class="col-6 bg-white rounded shadow p-2">
-            <img
-              class="img-rick col-6"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7nF_E8aRDS_lw7u92zXhIEFR12CcuZ6I2Nz0uLC4uuMZ90MwzaizGQrlYwqetBAgw_Vw&usqp=CAU"
-            />
-            <div id="items">
-              <div id="items">
-                <button class="" onclick="brick()">Give Rick a Brick</button>
-                <button class="" onclick="giveFire()">
-                  Give Rick some Fire
-                </button>
-                <button class="" onclick="karate()">
-                  Give Rick some Karate Skills
-                </button>
+      <!-- Main with 3 container cards -->
+      <div class="container-fluid">
+        <div class="row cont-row">
+          <div class="card-deck p-3">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="https://images-na.ssl-images-amazon.com/images/I/31ZsHTski2L._SX331_BO1,204,203,200_.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Your Weapon:</h5>
+                <p class="card-text">
+                  This is the oldest weapon in the book. Not effective for much,
+                  but if its what you got, its what you got.
+                </p>
+                <div class="d-flex justify-content-around">
+                  <button class="btn-slap" onclick="slap()">Slap</button>
+                  <button class="btn-punch" onclick="punch()">Punch</button>
+                  <button class="btn-warning" onclick="giveFire()">FIRE!!</button>
+                  <button class="btn-htcht" onclick="hatchet()">HATCHET</button>
+                </div>
               </div>
             </div>
-
-            <footer class="col-10 p-4">
-              <button class="btn-slap" onclick="slap()">SLAP!!!</button>
-              <button class="kick" onclick="kick()">Kick</button>
-              <button class="punch" onclick="punch()">Punch</button>
-              <button class="FIRE" onclick="giveFire()">FIRE</button>
-              <button class="brick" onclick="brick()">Brick</button>
-              <button class="karate" onclick="karate()">Karate</button>
-            </footer>
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="https://us.123rf.com/450wm/tvoukent/tvoukent1907/tvoukent190700074/127834443-extraterrestrial-alien-face-or-head-symbol-line-art-humanoid-head-outline-futuristic-space-invader-p.jpg?ver=6"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <h3>Alien Name: <br>LeeRoy KleeBorp</h3><br>
+                  This alien comes from a distant planet. It's here to eat
+                  bubble gum and kick it, but its all out of bubble gum.
+                </p>
+                <p class="card-text">
+                  
+                  <h4>
+                  <span>Health: <span id="health"> </span></span><br>
+                  <span>Hits:<span id="hits"> </span></span>
+                  </h4>
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="https://www.jing.fm/clipimg/detail/41-417390_axe-hatchet-lumber-cartoon-hatchet.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Alien Weapon</h5>
+                <p class="card-text">
+                  Where did these space commies get a hatchet???
+                </p>
+                <div class="d-flex justify-content-around">
+                  <button class="btn-slap" onclick="slap()">Slap</button>
+                  <button class="btn-warning" onclick="giveFire()">FIRE</button>
+                  <button class="btn-htcht" onclick="hatchet()">Hatchet</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
+    
+    <!-- Footer with slap button -->
+    <!-- <footer>
+      <button onclick="slap()">Slap</button>
+    </footer> -->
 
     <!-- Put Javascript tags here -->
     <script

@@ -8,74 +8,79 @@ items:[]
 var items = {
 	fire: {name: 'Fire', modifier: 2, description: 'IT BURNS!'},
     brick: { name: 'brick', modifier: 5, description: 'OUCH' },
-    karate:{name: 'high karate', modifier: 25, description: 'KNIFE HAND'}
+    hatchet:{name: 'hatchet', modifier: 25, description: 'CHOP CHOP'}
 }
-var itmImg = {
-	img: {twfiv: 'https://tvline.com/wp-content/uploads/2018/01/chappelles-show-best-sketches-rick-james.png?w=620', ten: 'https://www.soulhead.com/wp-content/uploads/2012/03/012.jpg', zero: 'https://okayplayer-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/dave-chappelle-prince-party-minneapolis--715x440.jpg'  },
+let imgHtml = {
+    alien: {
+        aLose: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhgjPtD8kA0jL6H3rO-6X4w31Nb0jNcSOhsA&usqp=CAU',
     
+        aWeak: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAFfyLC1D5HzWFFIh8rglIReKdKvOqoIxsMg&usqp=CAU'
+    },
+    weapon: {
+        fire: 'http://assets.stickpng.com/images/58469c62cef1014c0b5e47f6.png',
+        
+        imgUrl: 'https://www.jing.fm/clipimg/detail/41-417390_axe-hatchet-lumber-cartoon-hatchet.png'
+    }
 }
 
-
+function healthRange() {//Trying to set the min of 1 and max of 100
+    let num = Math.min(Math.max(parseInt(num), 1), 100);
+    num += health
+    console.log(health)
+    update()
+    return health
+}
+    
 function slap() {
     target.health--
     target.hit++
     update()
 }
+
 function update() {
-    console.log(target.health)
-    
-    //The only time you need a template is for multiple items in an array that have to be sorted through and selected (for loop)
+    // console.log(target.health)
     document.getElementById("health").innerHTML = `${target.health}`
     document.getElementById("hits").innerHTML = `${target.hit}`
     
 }
-function addItem(itemName){
-  // this finds the item out of the dictoinary and adds it to the cart
-  let item = items[itemName]
-  cart.push(item)
-  draw()
-}
+
 function giveItem() {
     let template = ''
 for (let key in items){
-  let item = items[key]
-  template += `
-     <div id="items">
-              <button class="" onclick="${brick()}">Give Rick a Brick</button>
-              <button class="" onclick="${giveFire()}">Give Rick some Fire</button>
-              <button class="" onclick="${karate()}">Give Rick some Karate Skills
-              </button>
-            </div>
+    let item = items[key]
+    template += `
+    <div class="d-flex justify-content-around">
+                <button onclick="slap()">Slap</button>
+                <button onclick="punch()">Punch</button>
+                <button onclick="giveFire()">FIRE!!</button>
+                <button onclick="hatchet()">HATCHET</button>
+                </div>
     `
 }
     document.getElementById('items').innerHTML = template
 }
 
-function kick(){
-    target.health -= 10 + addMods()
-    target.hit++
-    update()
-}
 function punch() {
-    target.health -= 5 + addMods()  //Only use the = sign one time on a line
+    // console.log("You got punch", punch)
+    target.health -= 5 + addMods()  
     target.hit++
     update()
 }
+
 function giveFire() {
-    target.health -= target.items.push(items.fire)
+    // console.log("You got fire", giveFire)
+    target.health -= 10 + addMods()  
     target.hit++
     update()
 }
-function brick(){
-    target.health -= target.items.push(items.brick)
+
+function hatchet() {
+    // console.log("You got hatchet", hatchet)
+    target.health -= target.items.push(items.hatchet)
     target.hit++
     update()
 }
-function karate(){
-    target.health -= target.items.push(items.karate)
-    target.hit++
-    update()
-}
+
 function addMods(){   //target.items[fire.modifier] this is the target path to get the modifier
     let modTotal = 0
     for (let i = 0; i < target.items.length; i++){
@@ -84,14 +89,10 @@ function addMods(){   //target.items[fire.modifier] this is the target path to g
     return modTotal
 }
 
-function noHealth() {
-    if (target.health <= 25) {
-        alert("Im RICK JAMES")
-    } else if
-        (target.health <= 10)
-        alert("Come Party with the man")
-    else {
-        target.health <= 0
-            alert("I took it too far Charlie Murphy")
-    }
-}
+// function healthRange() { //Trying to set the range for the health
+//     var n = health
+//     n = Number(n);
+//     n = Math.min(100, Math.max(0, n));
+//     console.log(n)
+//     return n += health
+// }

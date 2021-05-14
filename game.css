@@ -1,9 +1,55 @@
 /*Only use this file if you want to override bootstrap or create your own style*/
-.img-rick {
-  width: 200px;
+
+* {
+  outline: 1px solid red;
+}
+
+:root {
+  --theme: #07ab80;
+  --theme-gray: #5b636e;
+  --theme-white: #e5e5e5;
+  --card-white: #ffffff;
+  --btn-grn: #07ab80;
+  --btn-pnch: #e4192a;
+  --btn-htcht: #0e85e7;
+}
+body {
+  background-image: url(https://ih0.redbubble.net/image.890867292.9388/flat,1000x1000,075,f.u1.jpg);
+  background-color: #cccccc;
+  padding: 0;
+  margin: 0;
+}
+.cont-row {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 15rem;
 }
 
 .btn-slap {
-  width: 200px;
-  height: 100px;
+  background-color: var(--btn-grn);
 }
+
+.btn-punch {
+  background-color: var(--btn-pnch);
+}
+
+.btn-htcht {
+  background-color: var(--btn-htcht);
+}
+
+/* <!-- Image for the hatchet
+      https://www.jing.fm/clipimg/detail/41-417390_axe-hatchet-lumber-cartoon-hatchet.png
+       -->
+       <!-- Image if the alien loses
+      https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhgjPtD8kA0jL6H3rO-6X4w31Nb0jNcSOhsA&usqp=CAU --> */
+
+/* Image for the alien before it loses- 
+      https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAFfyLC1D5HzWFFIh8rglIReKdKvOqoIxsMg&usqp=CAU */
+
+/* Fire image
+    http://assets.stickpng.com/images/58469c62cef1014c0b5e47f6.png */

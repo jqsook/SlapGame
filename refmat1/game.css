@@ -9,3 +9,41 @@
 body {
   background-color: rgb(42, 77, 65);
 }
+
+/* // function giveItem() {
+//     let template = ''
+// for (let key in items){
+//     let item = items[key]
+//     template += `
+//     <div class="d-flex justify-content-around">
+//                 <button onclick="slap()">Slap</button>
+//                 <button onclick="punch()">Punch</button>
+//                 <button onclick="giveFire()">FIRE!!</button>
+//                 <button onclick="hatchet()">HATCHET</button>
+//                 </div>
+//     `
+// }
+//     document.getElementById('items').innerHTML = template
+// } */
+
+/* // function addItem(itemName){
+//   // this finds the item out of the dictoinary and adds it to the cart
+//   let item = items[itemName]
+//   cart.push(item)
+//   draw()
+// }
+
+// function giveItem() {
+//     let template = ''
+// for (let key in items){
+//     let item = items[key]
+//     template += `
+//     <div class="d-flex justify-content-around">
+//         <button class="btn-slap" onclick="slap()">Slap</button>
+//         <button class="btn-warning" onclick="giveFire()">FIRE</button>
+//         <button class="btn-htcht" onclick="hatchet()">Hatchet</button>
+//     </div>
+//     `
+// }
+//     document.getElementById('items').innerHTML = template
+// } */

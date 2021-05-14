@@ -22,18 +22,17 @@ let imgHtml = {
         imgUrl: 'https://www.jing.fm/clipimg/detail/41-417390_axe-hatchet-lumber-cartoon-hatchet.png'
     }
 }
+// Notes-
+// Need to figure out the going below zero on health and hits
+// Cycle image based on health and user choice for weapon
+// Progress bar (in Nav bar) operation based on health
 
-function healthRange() {//Trying to set the min of 1 and max of 100
-    let num = Math.min(Math.max(parseInt(num), 1), 100);
-    num += health
-    console.log(health)
-    update()
-    return health
-}
     
 function slap() {
-    target.health--
-    target.hit++
+    Math.min(Math.max(parseInt(target.health--), 1), 100);
+    Math.min(Math.max(parseInt(target.hit++), 1), 100);
+    // target.health--
+    // target.hit++
     update()
 }
 
@@ -44,40 +43,47 @@ function update() {
     
 }
 
-function giveItem() {
-    let template = ''
-for (let key in items){
-    let item = items[key]
-    template += `
-    <div class="d-flex justify-content-around">
-                <button onclick="slap()">Slap</button>
-                <button onclick="punch()">Punch</button>
-                <button onclick="giveFire()">FIRE!!</button>
-                <button onclick="hatchet()">HATCHET</button>
-                </div>
-    `
-}
-    document.getElementById('items').innerHTML = template
-}
+
+// function giveItem() {
+//     let template = ''
+// for (let key in items){
+//     let item = items[key]
+//     template += `
+//     <div class="d-flex justify-content-around">
+//         <button class="btn-slap" onclick="slap()">Slap</button>
+//         <button class="btn-warning" onclick="giveFire()">FIRE</button>
+//         <button class="btn-htcht" onclick="hatchet()">Hatchet</button>
+//     </div>
+//     `
+// }
+//     document.getElementById('items').innerHTML = template
+// }
+
 
 function punch() {
     // console.log("You got punch", punch)
-    target.health -= 5 + addMods()  
-    target.hit++
+    Math.min(Math.max(parseInt(target.health -= 5 + addMods()), 1), 100);
+    Math.min(Math.max(parseInt(target.hit++), 1), 100);
+    // target.health -= 5 + addMods()  
+    // target.hit++
     update()
 }
 
 function giveFire() {
     // console.log("You got fire", giveFire)
-    target.health -= 10 + addMods()  
-    target.hit++
+    Math.min(Math.max(parseInt(target.health -= 10 + addMods()), 1), 100);
+    Math.min(Math.max(parseInt(target.hit++), 1), 100);
+    // target.health -= 10 + addMods()  
+    // target.hit++
     update()
 }
 
 function hatchet() {
     // console.log("You got hatchet", hatchet)
-    target.health -= target.items.push(items.hatchet)
-    target.hit++
+    Math.min(Math.max(parseInt(target.health -= target.items.push(items.hatchet)), 1), 100);
+    Math.min(Math.max(parseInt(target.hit++), 1), 100);
+    // target.health -= target.items.push(items.hatchet)
+    // target.hit++
     update()
 }
 
@@ -89,10 +95,3 @@ function addMods(){   //target.items[fire.modifier] this is the target path to g
     return modTotal
 }
 
-// function healthRange() { //Trying to set the range for the health
-//     var n = health
-//     n = Number(n);
-//     n = Math.min(100, Math.max(0, n));
-//     console.log(n)
-//     return n += health
-// }
